@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8e0b6123822b46a6893c74ea64cdf887" Name="Diagram1">
+        <EntityTypeShape EntityType="AssignmentDBModel.Account" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssignmentDBModel.Category" Width="1.5" PointX="1.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssignmentDBModel.Course" Width="1.5" PointX="1.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssignmentDBModel.Staff" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssignmentDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssignmentDBModel.Topic" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssignmentDBModel.Trainee" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssignmentDBModel.Trainer" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="AssignmentDBModel.FK__Staff__ID__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="AssignmentDBModel.FK__Trainee__ID__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="AssignmentDBModel.FK__Trainer__ID__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="AssignmentDBModel.FK__Course__CateID__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="AssignmentDBModel.FK__Trainee__Trainer__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="AssignmentDBModel.TopicCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="AssignmentDBModel.TraineeCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="AssignmentDBModel.TrainerTopic" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

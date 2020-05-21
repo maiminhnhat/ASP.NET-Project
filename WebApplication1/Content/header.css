@@ -1,0 +1,26 @@
+
+    header .Logout a {
+        color: gold;
+        position: absolute;
+        right: 50px;
+        top: 15px;
+    }
+    header .Logout a:hover{
+        color: lightyellow;
+        text-decoration: none;
+    }
+.menu{
+    margin-top:61px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color:gold;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: lightyellow;
+    text-decoration: none;
+}
+.bg-success {
+    background-color: #28a745 !important;
+    padding-top: 40px !important;
+}
+

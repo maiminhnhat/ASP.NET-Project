@@ -1,0 +1,120 @@
+﻿@model IEnumerable<WebApplication1.Account>
+
+@{
+    Layout = null;
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+
+        <link href="~/Content/header.css" rel="stylesheet" />
+        <link href="~/Content/main_home.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <div class="Logout">
+                            <a href="@Url.Action("SignOut","Home")">Log Out</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!-- Header -->
+        <!-- main -->
+        <section>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="menu">
+                            <ul class="list-group">
+
+                                <li class="list-group-item">@Html.ActionLink("Create New Account", "Create")</li>
+                                <li class="list-group-item"><a href="@Url.Action("Index","Home")">List of Active account</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="content">
+                            <h2>List Active Account</h2>
+
+
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Username)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PassWord)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Role)
+                                    </th>
+                                    <th>Function</th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Username)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PassWord)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Role)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+        <!-- main -->
+
+        <script src="~/Scripts/jquery-3.5.0.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+    </body>
+</html>
+
+
+}
+

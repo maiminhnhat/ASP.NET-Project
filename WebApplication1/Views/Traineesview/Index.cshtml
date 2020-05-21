@@ -1,0 +1,108 @@
+﻿@model IEnumerable<WebApplication1.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+        <link href="~/Content/Styleheadertrainee.css" rel="stylesheet" />
+        <link href="~/Content/Stylemainhometrainee.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Traineesview/Index">Course</a>
+
+                </ul>
+                @using (Html.BeginForm("Index", "Traineesview", FormMethod.Get))
+                {
+                    @Html.TextBox("searching")<input type="submit" value="Search" class="btn btn-success" />
+
+
+                }
+                <div class="Logout">
+                    <a href="/Home/SignOut">Log Out</a>
+                </div>
+
+                <p style=" position: absolute; top: 11px; right: 400px">
+
+                    @Html.ActionLink("Edit Your Profile", "Edit", "Traineesview")
+
+                </p>
+            </nav>
+
+        </header>
+        <!-- Header -->
+        <div class="content">
+            <h2>Your Course</h2>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category.Name)
+                    </th>
+                  
+                </tr>
+
+                @if (Model.Count() == 0)
+                {
+                    <tr>
+                        <td colspan="3" style="color:forestgreen">
+                            No Match Any Document
+
+                        </td>
+                    </tr>
+
+
+                }
+                else
+                {
+
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Category.Name)
+                            </td>
+                        </tr>
+                    }
+
+                }
+
+            </table>
+
+        </div>
+        <script src="~/Scripts/jquery-3.5.0.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+}
+
+
+
+
+

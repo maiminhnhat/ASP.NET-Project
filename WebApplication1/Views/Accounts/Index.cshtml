@@ -1,0 +1,106 @@
+﻿@model IEnumerable<WebApplication1.Models.Account>
+
+@{
+    Layout = null;
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+
+        <link href="~/Content/header.css" rel="stylesheet" />
+        <link href="~/Content/main_home.css" rel="stylesheet" />
+
+    </head>
+    
+    <body>
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+                <div class="Logout">
+                    <a href="/Home/SignOut">Log Out</a>
+                </div>
+            </nav>
+
+        </header>
+        <!-- Header -->
+        <!-- main -->
+        <section style="padding-top:10px">
+            <div class="container">
+                <p style="margin-top: 65px">
+                 @Html.ActionLink("Create New Account", "Create", "Accounts", new { @class = "btn btn-success" })
+                </p>
+                <div class="content">
+                    <h2>List Active Account</h2>
+                    <table class="table">
+                        <tr style="text-align:center">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Username)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PassWord)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Role)
+                            </th>
+                            <th>Function</th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr style="text-align:center">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Username)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PassWord)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Role)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new {@class="btn btn-light" }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class="btn btn-success"}) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class="btn btn-danger"})
+
+                                   
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+
+                </div>
+
+            </div>
+
+          
+
+
+
+           
+
+
+        </section>
+        <!-- main -->
+
+        <script src="~/Scripts/jquery-3.5.0.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+    </body>
+    </html>
+
+
+}
+

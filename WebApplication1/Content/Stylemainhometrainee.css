@@ -1,0 +1,30 @@
+﻿body p a {
+    color: gold;
+}
+
+    body p a:hover {
+        color: lightyellow;
+        text-decoration: none;
+    }
+
+td a:hover {
+    color: cyan;
+    text-decoration: none;
+}
+
+.btn-success {
+    color: gold;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+header nav form {
+    position: absolute;
+    right: 116px;
+    top: -59px;
+    margin-top: 67px;
+}
+button, input {
+    overflow: visible;
+    border-radius: 16px;
+    border-color: gold;
+}

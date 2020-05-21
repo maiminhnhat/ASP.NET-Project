@@ -1,0 +1,16 @@
+body p  a {
+    color: gold;
+}
+    body p  a:hover {
+        color: lightyellow;
+        text-decoration: none;
+    }
+td a:hover{
+    color:cyan;
+    text-decoration:none;
+}
+.btn-success {
+    color: gold;
+    background-color: #28a745;
+    border-color: #28a745;
+}
