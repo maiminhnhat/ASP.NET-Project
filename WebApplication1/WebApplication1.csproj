@@ -269,6 +269,7 @@
     <Content Include="Content\main_home.css" />
     <Content Include="Content\main_styles.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\Stylefooter.css" />
     <Content Include="Content\Styleheadertrainee.css" />
     <Content Include="Content\Stylemainhometrainee.css" />
     <Content Include="favicon.ico" />
