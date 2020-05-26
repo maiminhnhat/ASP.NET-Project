@@ -38,7 +38,7 @@ namespace WebApplication1.MyRoleProvider
 
         public override string[] GetRolesForUser(string username)
         {
-            AssignmentDBEntities2 db = new AssignmentDBEntities2();
+            ProjectASPDBEntities db = new ProjectASPDBEntities();
             string data = db.Accounts.Where(x => x.Username == username).FirstOrDefault().Role;
             string[] result = { data };
             return result;

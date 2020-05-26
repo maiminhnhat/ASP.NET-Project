@@ -13,7 +13,7 @@ namespace WebApplication1.Controllers
     [Authorize(Roles = "Staff")]
     public class TopicsController : Controller
     {
-        private AssignmentDBEntities2 db = new AssignmentDBEntities2();
+        private ProjectASPDBEntities db = new ProjectASPDBEntities();
 
         // GET: Topics
         public ActionResult Index(string searching)

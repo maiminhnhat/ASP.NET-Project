@@ -18,7 +18,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Login(Account model, string returnUrl)
         {
-            AssignmentDBEntities2 db = new AssignmentDBEntities2();
+             ProjectASPDBEntities db = new ProjectASPDBEntities();
             var dataItem = db.Accounts.Where(x => x.Username == model.Username && x.PassWord == model.PassWord).FirstOrDefault();
           
             if (dataItem != null)

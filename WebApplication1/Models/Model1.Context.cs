@@ -13,10 +13,10 @@ namespace WebApplication1.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AssignmentDBEntities2 : DbContext
+    public partial class ProjectASPDBEntities : DbContext
     {
-        public AssignmentDBEntities2()
-            : base("name=AssignmentDBEntities2")
+        public ProjectASPDBEntities()
+            : base("name=ProjectASPDBEntities")
         {
         }
     
@@ -29,7 +29,6 @@ namespace WebApplication1.Models
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Topic> Topics { get; set; }
         public virtual DbSet<Trainee> Trainees { get; set; }
         public virtual DbSet<Trainer> Trainers { get; set; }

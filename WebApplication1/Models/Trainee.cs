@@ -34,7 +34,9 @@ namespace WebApplication1.Models
         public Nullable<int> TrainerID { get; set; }
     
         public virtual Account Account { get; set; }
+        public virtual Account Account1 { get; set; }
         public virtual Trainer Trainer { get; set; }
+        public virtual Trainer Trainer1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }
     }

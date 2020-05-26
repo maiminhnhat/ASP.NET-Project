@@ -18,6 +18,7 @@ namespace WebApplication1.Models
         public Category()
         {
             this.Courses = new HashSet<Course>();
+            this.Courses1 = new HashSet<Course>();
         }
     
         public int CateID { get; set; }
@@ -26,5 +27,7 @@ namespace WebApplication1.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Course> Courses1 { get; set; }
     }
 }

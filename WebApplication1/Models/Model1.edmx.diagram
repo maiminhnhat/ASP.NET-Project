@@ -4,23 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8e0b6123822b46a6893c74ea64cdf887" Name="Diagram1">
-        <EntityTypeShape EntityType="AssignmentDBModel.Account" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssignmentDBModel.Category" Width="1.5" PointX="1.5" PointY="12.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssignmentDBModel.Course" Width="1.5" PointX="1.5" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssignmentDBModel.Staff" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssignmentDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssignmentDBModel.Topic" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssignmentDBModel.Trainee" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssignmentDBModel.Trainer" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <AssociationConnector Association="AssignmentDBModel.FK__Staff__ID__71D1E811" ManuallyRouted="false" />
-        <AssociationConnector Association="AssignmentDBModel.FK__Trainee__ID__797309D9" ManuallyRouted="false" />
-        <AssociationConnector Association="AssignmentDBModel.FK__Trainer__ID__75A278F5" ManuallyRouted="false" />
-        <AssociationConnector Association="AssignmentDBModel.FK__Course__CateID__01142BA1" ManuallyRouted="false" />
-        <AssociationConnector Association="AssignmentDBModel.FK__Trainee__Trainer__7A672E12" ManuallyRouted="false" />
-        <AssociationConnector Association="AssignmentDBModel.TopicCourse" ManuallyRouted="false" />
-        <AssociationConnector Association="AssignmentDBModel.TraineeCourse" ManuallyRouted="false" />
-        <AssociationConnector Association="AssignmentDBModel.TrainerTopic" ManuallyRouted="false" />
+      <Diagram DiagramId="d6b1a4daa7604ab08fff7e8749d4392a" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectASPDBModel.Account" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectASPDBModel.Category" Width="1.5" PointX="1.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectASPDBModel.Course" Width="1.5" PointX="1.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectASPDBModel.Staff" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectASPDBModel.Topic" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectASPDBModel.Trainee" Width="1.5" PointX="6" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectASPDBModel.Trainer" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Staff__ID__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Staff__ID__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Trainee__ID__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Trainee__ID__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Trainer__ID__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Trainer__ID__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Course__CateID__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Course__CateID__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Trainee__Trainer__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.FK__Trainee__Trainer__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.TopicCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.TraineeCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectASPDBModel.TrainerTopic" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

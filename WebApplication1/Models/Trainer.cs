@@ -18,6 +18,7 @@ namespace WebApplication1.Models
         public Trainer()
         {
             this.Trainees = new HashSet<Trainee>();
+            this.Trainees1 = new HashSet<Trainee>();
             this.Topics = new HashSet<Topic>();
         }
     
@@ -31,8 +32,11 @@ namespace WebApplication1.Models
         public Nullable<int> ID { get; set; }
     
         public virtual Account Account { get; set; }
+        public virtual Account Account1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Trainee> Trainees { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Trainee> Trainees1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Topic> Topics { get; set; }
     }

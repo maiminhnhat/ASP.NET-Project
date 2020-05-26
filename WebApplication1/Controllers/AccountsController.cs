@@ -13,7 +13,7 @@ namespace WebApplication1.Controllers
     [Authorize(Roles = "Admin")]
     public class AccountsController : Controller
     {
-        private AssignmentDBEntities2 db = new AssignmentDBEntities2();
+        private ProjectASPDBEntities db = new ProjectASPDBEntities();
 
         // GET: Accounts
       
