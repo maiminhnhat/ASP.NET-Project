@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<WebApplication1.Models.Course>
 
 @{
-    ViewBag.Title = "Index";
+    Layout=null;
 }
 
 @if (User.Identity.IsAuthenticated)
@@ -16,6 +16,8 @@
         <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
         <link href="~/Content/Styleheadertrainee.css" rel="stylesheet" />
         <link href="~/Content/Stylemainhometrainee.css" rel="stylesheet" />
+        <link href="~/Content/main_styles.css" rel="stylesheet" />
+        <link href="~/Content/Stylefooter.css" rel="stylesheet" />
     </head>
     <body>
         <!-- header -->
@@ -46,30 +48,50 @@
 
         </header>
         <!-- Header -->
-        <div class="content">
-            <h2>Your Course</h2>
-            <table class="table">
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Name)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Description)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Category.Name)
-                    </th>
-                  
-                </tr>
+        <div id="demo" class="carousel slide" data-ride="carousel">
 
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/Content/img/background.jpg" alt="Los Angeles">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/slider_background.jpg" alt="Chicago">
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title text-center">
+                        <h1 style="padding-top:20px">Your Topics</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row course_boxes">
                 @if (Model.Count() == 0)
                 {
-                    <tr>
-                        <td colspan="3" style="color:forestgreen">
-                            No Match Any Document
+                    <h5> No Match Any Document</h5>
 
-                        </td>
-                    </tr>
+
 
 
                 }
@@ -78,28 +100,60 @@
 
                     foreach (var item in Model)
                     {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Description)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Category.Name)
-                            </td>
-                        </tr>
+                        <div class="col-lg-4 course_box">
+                            <div class="card" style="margin-top:30px">
+                                <img class="card-img-top" src="~/Content/img/course_1.jpg">
+                                <div class="card-body text-center">
+                                    <div class="card-title"> @Html.DisplayFor(modelItem => item.Name)</div>
+                                    <div class="card-text">@Html.DisplayFor(modelItem => item.Description) </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
                     }
 
                 }
+            </div>
 
-            </table>
+
+
+
+
 
         </div>
         <script src="~/Scripts/jquery-3.5.0.js"></script>
         <script src="~/Scripts/bootstrap.js"></script>
         <script src="~/Scripts/bootstrap.min.js"></script>
     </body>
+    <footer style="margin-top:30px">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="text-uppercase font-weight-bold" style="color:gold">Footer text 1</h5>
+                <p style="color:white">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
+                    repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
+                    harum esse fugiat. Itaque, culpa?
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
+                    repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
+                    harum esse fugiat. Itaque, culpa?
+                </p>
+            </div>
+
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 }
 
 

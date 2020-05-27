@@ -312,7 +312,7 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\WebApplication120200527001029 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ASPNETWeb - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.5.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.0.js" />
     <Content Include="Scripts\jquery-3.5.0.min.js" />
